@@ -1,0 +1,57 @@
+{
+	"name": "@erwinstone/bs-select",
+	"version": "1.0.0",
+	"description": "Bootstrap plugin to create select element with dropdown",
+	"main": "dist/bs-select.js",
+	"types": "dist/bs-select.d.ts",
+	"module": "dist/bs-select.module.js",
+	"source": "src/bs-select.ts",
+	"repository": "https://github.com/erwinstone/bs-select.git",
+	"license": "MIT",
+	"author": "erwinstone",
+	"keywords": [
+		"bootstrap select",
+		"bootstrap select2",
+		"dropdown select",
+		"bootstrap dropdown",
+		"bootstrap5"
+	],
+	"bugs": {
+		"url": "https://github.com/erwinstone/bs-select/issues"
+	},
+	"homepage": "https://bs-select.vercel.app/",
+	"files": [
+		"dist"
+	],
+	"exports": {
+		"default": "./dist/bs-select.js",
+		"import": "./dist/bs-select.module.js",
+		"require": "./dist/bs-select.js"
+	},
+	"scripts": {
+    "build": "run-s build-*",
+    "build-js": "rollup -c",
+    "build-css": "sass --source-map --embed-sources src:dist",
+    "build-css-prefix": "postcss dist/*.css !dist/*.min.css --use autoprefixer --map --replace",
+    "build-css-min": "cssmin dist",
+    "build-dts": "tsc src/bs-select.ts -d --emitDeclarationOnly --esModuleInterop --downlevelIteration --target esnext --outDir dist",
+    "build-dts-module": "shx cp dist/bs-select.d.ts dist/bs-select.module.d.ts",
+		"dev": "run-p dev-*",
+    "dev-js": "rollup -c -w",
+    "dev-css": "sass --source-map --embed-sources src:dist --watch"
+  },
+	"devDependencies": {
+    "@erwinstone/cssmin": "^1.0.0",
+    "autoprefixer": "^10.4.0",
+    "bootstrap": "^5.1.3",
+    "esbuild": "^0.14.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "rollup": "^2.61.1",
+    "rollup-plugin-esbuild": "^4.7.2",
+    "sass": "^1.45.1",
+    "shx": "^0.3.3",
+    "typescript": "^4.5.4"
+  }
+}

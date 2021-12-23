@@ -1,0 +1,165 @@
+.bss-wrapper .form-select {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding-left: 0.75rem;
+  min-height: calc(1.5em + 0.75rem + 2px);
+}
+.bss-wrapper .form-select.show {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.bss-wrapper .form-select[data-show-clear]:not([disabled]) {
+  padding-right: 3.25rem;
+}
+.bss-wrapper .form-select.form-select-sm {
+  padding-left: 0.5rem;
+  min-height: calc(1.5em + 0.5rem + 2px);
+}
+.bss-wrapper .form-select.form-select-sm[data-show-clear]:not([disabled]) {
+  padding-right: 3.125rem;
+}
+.bss-wrapper .form-select.form-select-lg {
+  padding-left: 1rem;
+  min-height: calc(1.5em + 1rem + 2px);
+}
+.bss-wrapper .form-select.form-select-lg[data-show-clear]:not([disabled]) {
+  padding-right: 3.375rem;
+}
+.bss-wrapper .bss-placeholder {
+  color: #6c757d;
+}
+.bss-wrapper .bss-search-wrapper {
+  padding: 0 0.5rem;
+}
+.bss-wrapper .dropdown-menu {
+  width: 100%;
+  overflow-y: auto;
+}
+.bss-wrapper .dropdown-menu .flex-column {
+  gap: 0.5rem;
+}
+.bss-wrapper .form-select-sm + .dropdown-menu {
+  font-size: 0.875rem;
+}
+.bss-wrapper .form-select-lg + .dropdown-menu {
+  font-size: 1.25rem;
+}
+.bss-wrapper .dropdown-item:focus {
+  outline: 0;
+}
+.bss-wrapper .dropdown-header {
+  font-size: inherit;
+}
+.bss-wrapper .dropdown-header > span {
+  font-size: 0.875rem;
+}
+.bss-wrapper .form-control {
+  font-size: inherit;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+  padding-right: 0.75rem !important;
+  background-image: none !important;
+}
+.bss-wrapper .form-control.form-control-sm {
+  padding-right: 0.5rem !important;
+}
+.bss-wrapper .form-control.form-control-lg {
+  padding-right: 1rem !important;
+}
+.bss-wrapper .bss-no-results {
+  margin-top: -0.5rem;
+}
+.bss-wrapper .bss-no-results:hover {
+  background-color: transparent;
+}
+.bss-wrapper .bss-no-results:active {
+  color: #212529;
+}
+.bss-wrapper .bss-clear {
+  position: absolute;
+  top: 0;
+  right: 2.25rem;
+  color: #6c757d;
+  border: 0;
+  bottom: 0;
+  padding: 0;
+  display: none;
+  box-shadow: none;
+  align-items: center;
+  cursor: pointer;
+}
+.bss-wrapper .bss-clear:hover {
+  color: inherit;
+}
+.bss-wrapper .bss-clear svg {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.bss-wrapper [data-show-clear]:not([disabled]) ~ .bss-clear {
+  display: flex;
+}
+.bss-wrapper .bss-tag {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 0 0.25rem 0 0.1875rem;
+  border-radius: 0.25rem;
+  height: calc(1.5 * 1rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1875rem;
+  position: relative;
+  font-size: 92%;
+}
+.bss-wrapper .bss-tag-remove {
+  width: 1rem;
+  height: 1rem;
+  color: #6c757d;
+  transition: color 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bss-wrapper .bss-tag-remove {
+    transition: none;
+  }
+}
+.bss-wrapper .bss-tag-remove:hover {
+  color: #212529;
+}
+.bss-wrapper .form-select-sm .bss-tag {
+  height: calc(1.5 * 0.875rem);
+  font-size: 91%;
+}
+.bss-wrapper .form-select-lg .bss-tag {
+  height: calc(1.5 * 1.25rem);
+  font-size: 90%;
+}
+.bss-wrapper .form-select-sm .bss-tag-remove {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.bss-wrapper .form-select-lg .bss-tag-remove {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.bss-wrapper .form-select[disabled] .bss-tag {
+  background-color: transparent;
+}
+.bss-wrapper .form-select[disabled] .bss-tag-remove {
+  color: #b6babe;
+}
+.was-validated .form-select:invalid + .bss-wrapper .form-select, .form-select.is-invalid + .bss-wrapper .form-select {
+  border-color: #dc3545;
+}
+.was-validated .form-select:invalid + .bss-wrapper .form-select.show, .was-validated .form-select:invalid + .bss-wrapper .form-select:focus, .form-select.is-invalid + .bss-wrapper .form-select.show, .form-select.is-invalid + .bss-wrapper .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+.was-validated .form-select:valid + .bss-wrapper .form-select, .form-select.is-valid + .bss-wrapper .form-select {
+  border-color: #198754;
+}
+.was-validated .form-select:valid + .bss-wrapper .form-select.show, .was-validated .form-select:valid + .bss-wrapper .form-select:focus, .form-select.is-valid + .bss-wrapper .form-select.show, .form-select.is-valid + .bss-wrapper .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/*# sourceMappingURL=bs-select.css.map */
