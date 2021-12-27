@@ -117,10 +117,15 @@ class Bss {
 	}
 
 	private registerEvents() {
-		// focus on the active item
 		this.dropdownToggle.addEventListener('shown.bs.dropdown', () => {
-			const active = this.dropdown.querySelector(`.${this.classItem}.active`)
-			if (active && active instanceof HTMLButtonElement) active.focus()
+			if (this.search) {
+				// focus on search input
+				this.searchInput.focus()
+			} else {
+				// focus on the active item
+				const active = this.dropdown.querySelector(`.${this.classItem}.active`)
+				if (active && active instanceof HTMLButtonElement) active.focus()
+			}
 		})
 
 		// search

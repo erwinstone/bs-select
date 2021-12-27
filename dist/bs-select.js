@@ -1,5 +1,5 @@
 /*!
-* @erwinstone/bs-select v1.0.0 (https://bs-select.vercel.app/)
+* @erwinstone/bs-select v1.0.1 (https://bs-select.vercel.app/)
 * Copyright 2021 erwinstone
 * Licensed under MIT (https://github.com/erwinstone/bs-select/blob/master/LICENSE)
 */
@@ -98,9 +98,13 @@
 	  }
 	  registerEvents() {
 	    this.dropdownToggle.addEventListener("shown.bs.dropdown", () => {
-	      const active = this.dropdown.querySelector(`.${this.classItem}.active`);
-	      if (active && active instanceof HTMLButtonElement)
-	        active.focus();
+	      if (this.search) {
+	        this.searchInput.focus();
+	      } else {
+	        const active = this.dropdown.querySelector(`.${this.classItem}.active`);
+	        if (active && active instanceof HTMLButtonElement)
+	          active.focus();
+	      }
 	    });
 	    this.searchInput.addEventListener("keyup", (e) => {
 	      const value = this.searchInput.value.trim();
