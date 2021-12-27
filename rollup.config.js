@@ -1,4 +1,5 @@
-// import fs from 'fs'
+// @ts-check
+import { defineConfig } from 'rollup'
 import pkg from './package.json'
 import esbuild from 'rollup-plugin-esbuild'
 
@@ -12,7 +13,7 @@ const banner = `/*!
 // global variable name
 const name = 'Bss'
 
-export default [
+export default defineConfig([
 	{
 		input: pkg.source,
 		output: [
@@ -29,4 +30,4 @@ export default [
 		],
 		plugins: [esbuild({ minify: true })],
 	},
-]
+])
