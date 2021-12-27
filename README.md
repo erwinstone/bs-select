@@ -27,8 +27,8 @@ npm install @erwinstone/bs-select
 
 Install from cdn:
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@erwinstone/bs-select@1.0.0/dist/bs-select.min.css">
-<script src="https://unpkg.com/@erwinstone/bs-select@1.0.0/dist/bs-select.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@erwinstone/bs-select@1.0.1/dist/bs-select.min.css">
+<script src="https://unpkg.com/@erwinstone/bs-select@1.0.1/dist/bs-select.min.js"></script>
 ```
 ## Usage/Examples
 
